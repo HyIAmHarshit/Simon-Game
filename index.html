@@ -7,6 +7,7 @@
     <style>
       body {
         text-align: center;
+        background-color: #d0bdf4;
       }
 
       .btn {
@@ -48,7 +49,7 @@
   </head>
   <body>
     <h1>Simon Says Game</h1>
-    <h2>Press any key to start</h2>
+    <h2>Touch anywhere to start</h2>
 
     <div class="btn-cont">
       <div class="line-one">
@@ -74,7 +75,7 @@
 
       let h2 = document.querySelector("h2");
 
-      document.addEventListener("keypress", function () {
+      document.addEventListener("click", function () {
         if (started == false) {
           started = true;
 
@@ -114,7 +115,7 @@
             setTimeout(levelup(), 1000);
           }
         } else {
-          h2.innerHTML = `Game over! Your score is <b>${level}</b>. </br>  press any key to start.`;
+          h2.innerHTML = `Game over! Your score is <b>${level}</b>. </br>  Touch anywhere to start.`;
           document.querySelector("body").style.backgroundColor = "red";
           setTimeout(function () {
             document.querySelector("body").style.backgroundColor = "white";
